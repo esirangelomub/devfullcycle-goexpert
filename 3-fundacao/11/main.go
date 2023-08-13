@@ -45,4 +45,6 @@ func main() {
 	minhaEmpresa := Empresa{}
 
 	Desativacao(minhaEmpresa)
+
+	fmt.Printf("O cliente %s está ativo? %t\n", wesley.Nome, wesley.Ativo)
 }
