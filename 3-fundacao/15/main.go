@@ -2,8 +2,11 @@ package main
 
 import "fmt"
 
+// Utilizar pouco, pois o ideal é tipar as variáveis
+type xis interface{}
+
 func main() {
-	var x interface{} = 10
+	var x xis = 10
 	var y interface{} = "Hello, World!"
 
 	showType(x)

@@ -9,8 +9,9 @@ func soma(a, b *int) int {
 func main() {
 	minhaVar1 := 10
 	minhaVar2 := 20
-	soma(&minhaVar1, &minhaVar2)
+	soma1 := soma(&minhaVar1, &minhaVar2)
 
 	println(minhaVar1)
 	println(minhaVar2)
+	println(soma1)
 }

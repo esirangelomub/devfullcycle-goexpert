@@ -30,4 +30,6 @@ func main() {
 	println(Soma(m2))
 	println(Soma(m3))
 	println(Compara(10, 10))
+	println(Compara(10.0, 10.0))
+	// Usar o pacote comparable para comparacoes mais complexas, com tipos diferentes
 }
