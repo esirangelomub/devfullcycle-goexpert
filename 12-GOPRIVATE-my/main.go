@@ -2,7 +2,6 @@ package main
 
 import (
 	"fmt"
-
 	"github.com/esirangelomub/fcutils-secret/pkg/events"
 )
 

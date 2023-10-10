@@ -1,4 +1,4 @@
-module teste
+module github.com/esirangelomub/devfullcycle-goexpert/12-GOPRIVATE-my
 
 go 1.19
 
