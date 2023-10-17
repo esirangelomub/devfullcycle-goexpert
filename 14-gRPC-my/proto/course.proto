@@ -1,0 +1,27 @@
+syntax = "proto3";
+package pb;
+option go_package = "internal/pb";
+
+import "shared.proto";
+
+message CreateCourseRequest {
+  string name = 1;
+  string description = 2;
+  string category_id = 3;
+}
+
+message CourseList {
+  repeated Course courses = 1;
+}
+
+message CourseGetRequest {
+  string id = 1;
+}
+
+service CourseService {
+  rpc CreateCourse(CreateCourseRequest) returns (Course) {}
+  rpc CreateCourseStream(stream CreateCourseRequest) returns (CourseList) {}
+  rpc CreateCourseStreamBidirectional(stream CreateCourseRequest) returns (stream Course) {}
+  rpc ListCourses(Blank) returns (CourseList) {}
+  rpc GetCourse(CourseGetRequest) returns (Course) {}
+}

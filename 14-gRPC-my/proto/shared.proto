@@ -1,0 +1,30 @@
+syntax = "proto3";
+package pb;
+option go_package = "internal/pb";
+
+message Blank {}
+
+message Category {
+  string id = 1;
+  string name = 2;
+  string description = 3;
+  repeated Course courses = 4; // hasMany relationship with Courses
+}
+
+message Course {
+  string id = 1;
+  string name = 2;
+  string description = 3;
+  Category category = 4; // belongsTo relationship with Category
+  repeated Lesson lessons = 5; // hasMany relationship with Lessons
+  string category_id = 6; // The raw ID of the category, which can be useful in some contexts
+}
+
+message Lesson {
+  string id = 1;
+  string name = 2;
+  string description = 3;
+  string content = 4;
+  Course course = 5; // belongsTo relationship with Course
+  string course_id = 6; // The raw ID of the category, which can be useful in some contexts
+}
