@@ -33,3 +33,7 @@ _testmain.go
 
 # Binary builds
 /bin/
+
+# Tmp
+15-UploadS3-my/tmp/*
+
